@@ -35,7 +35,7 @@ pipeline {
         stage('Deploy with Docker Compose') {
             steps {
                 sh '''
-                cd /var/lib/jenkins/workspace/flask-app
+                cd /var/lib/jenkins/workspace/flask-app-blue-green
                 docker-compose down
                 docker-compose pull
                 docker-compose up -d
